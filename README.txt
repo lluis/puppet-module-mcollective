@@ -1,3 +1,14 @@
+Forked MCollective Puppet Module to work with Initr
+---------------------------------------------------
+
+Author: Lluís Gili <lluis@ingent.net>
+
+About intir: http://www.initr.org
+             http://github.com/descala/initr
+
+To add this module to initr, add as a git submodule:
+  git submodule add git://github.com/lluis/puppet-module-mcollective.git puppet/modules/mcollective
+
 
 MCollective Puppet Module
 -------------------------

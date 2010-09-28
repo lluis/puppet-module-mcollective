@@ -1,0 +1,15 @@
+en:
+  field_mcollective_psk: PSK
+  field_mcollective_stomp_host: Stomp server
+  field_mcollective_factsource: Fact source
+  field_mcollective_stomp_port: Stomp port
+  field_mcollective_stomp_user: Stomp username
+  field_mcollective_stomp_password: Stomp password
+  field_mcollective_plugins_facter: Facter
+  field_mcollective_plugins_service: Service
+  field_mcollective_plugins_package: Package
+  field_mcollective_plugins_nrpe: Nrpe
+  field_mcollective_plugins_iptables: Iptables
+  field_mcollective_plugins_puppetd: Puppetd
+  field_mcollective_plugins_filemgr: Filemgr
+  field_mcollective_plugins_process: Process

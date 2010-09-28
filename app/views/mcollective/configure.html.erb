@@ -1,0 +1,25 @@
+<%= klass_menu "MCollective" %>
+
+<% labelled_tabular_form_for :mcollective, @klass, :url=>{:action=>'configure'} do |f| -%>
+  <%= f.error_messages %>
+
+  <p><%= f.text_field :mcollective_psk %></p>
+  <p><%= f.text_field :mcollective_stomp_host %></p>
+  <p><%= f.text_field :mcollective_stomp_port %></p>
+  <p><%= f.text_field :mcollective_stomp_user %></p>
+  <p><%= f.text_field :mcollective_stomp_password %></p>
+  <p><%= f.select :mcollective_factsource, ["facter","yaml"] %></p>
+
+  <h3>Plugins</h3>
+
+  <% @klass.plugins.each do |plugin| -%>
+    <p><%= f.check_box "mcollective_plugins_#{plugin}" %></p>
+  <% end -%>
+
+  <p><%= submit_tag("Save")%></p>
+
+<% end -%>
+
+<hr />
+
+<p><%= link_to "Back", :controller => 'klass', :action => 'list', :id => @node %></p>
