@@ -6,7 +6,7 @@ Author: Lluís Gili <lluis@ingent.net>
 About intir: http://www.initr.org
              http://github.com/descala/initr
 
-To add this module to initr, add as a git submodule:
+To add this module to initr, copy it on puppet/modules folder or add as a git submodule
   git submodule add git://github.com/lluis/puppet-module-mcollective.git puppet/modules/mcollective
 
 
