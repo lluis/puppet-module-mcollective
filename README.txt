@@ -9,6 +9,15 @@ About intir: http://www.initr.org
 To add this module to initr, copy it on puppet/modules folder or add as a git submodule
   git submodule add git://github.com/lluis/puppet-module-mcollective.git puppet/modules/mcollective
 
+Known Issues
+------------
+
+There's no "sys-proctable" gem on amd64, so don't enable the process management plugin on amd64 architectures.
+
+
+
+original readme:
+
 
 MCollective Puppet Module
 -------------------------
