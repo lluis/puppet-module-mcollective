@@ -12,7 +12,7 @@ class mcollective::install::redhat {
           creates => "/usr/local/src/mcollective-common-0.4.9-1.el5.noarch.rpm";
       "install mcollective":
           command => "rpm -i /usr/local/src/mcollective-0.4.9-1.el5.noarch.rpm /usr/local/src/mcollective-common-0.4.9-1.el5.noarch.rpm",
-          unless => "dpkg -ql mcollective &> /dev/null",
+          unless => "rpm -ql mcollective &> /dev/null",
           require => [ Exec["download mcollective"] , Exec["download mcollective-common"] ];
     }
 
