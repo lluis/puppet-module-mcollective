@@ -11,7 +11,7 @@ define mcollective::plugin_file ( $source ) {
         owner => root,
         group => root,
         mode  => 0444,
-        require => Class["mcollective::install"],
+        require => Exec["install mcollective"],
         notify => Service["mcollective"],
     }
 
