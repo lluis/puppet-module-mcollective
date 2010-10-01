@@ -11,7 +11,7 @@ define mcollective::ddl_file ( $source ) {
         owner => root,
         group => root,
         mode  => 0444,
-        require => Class["mcollective::install"],
+        require => Exec["install mcollective"],
     }
 
     file { "${p_base}/${title}": source => "${s_base}/${source}" }
