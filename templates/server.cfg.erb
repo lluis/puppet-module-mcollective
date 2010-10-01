@@ -3,6 +3,7 @@ libdir = <%= libdir %>
 logfile = /var/log/mcollective.log
 loglevel = info
 daemonize = 1
+identity = <%= fqdn %>
 
 # Plugins 
 <% if has_variable?('mcollective_psk' ) -%>
