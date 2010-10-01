@@ -5,7 +5,7 @@ define mcollective::plugin_file ( $source ) {
         debian,ubuntu: { $p_base = "/usr/share/mcollective/plugins/mcollective" }
         redhat,centos: { $p_base = "/usr/libexec/mcollective/mcollective" }
     }
-    $s_base = "puppet://$fileserver/mcollective/plugins"
+    $s_base = "puppet:///modules/mcollective/plugins"
 
     File {
         owner => root,
