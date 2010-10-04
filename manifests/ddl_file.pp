@@ -3,7 +3,7 @@ define mcollective::ddl_file ( $source ) {
 
     case $operatingsystem {
         debian,ubuntu: { $p_base = "/usr/share/mcollective/plugins/mcollective" }
-        redhat,centos: { $p_base = "/usr/libexec/mcollective/mcollective" }
+        redhat,centos,fedora: { $p_base = "/usr/libexec/mcollective/mcollective" }
     }
     $s_base = "puppet:///modules/mcollective/plugins"
 

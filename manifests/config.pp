@@ -3,7 +3,7 @@ class mcollective::config {
 
     case $operatingsystem {
         debian,ubuntu: { $libdir = "/usr/share/mcollective/plugins" }
-        redhat,centos: { $libdir = "/usr/libexec/mcollective" }
+        redhat,centos,fedora: { $libdir = "/usr/libexec/mcollective" }
     }
 
     File {
