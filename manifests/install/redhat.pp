@@ -1,8 +1,6 @@
 
 class mcollective::install::redhat {
 
-    include stomp
-
     exec {
       "download mcollective":
           command => "wget http://mcollective.googlecode.com/files/mcollective-0.4.9-1.el5.noarch.rpm",

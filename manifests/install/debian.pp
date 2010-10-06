@@ -1,7 +1,5 @@
 class mcollective::install::debian {
 
-    include stomp
-
     exec {
       "download mcollective":
           command => "wget http://mcollective.googlecode.com/files/mcollective_0.4.9-1_all.deb",
