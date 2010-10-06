@@ -13,7 +13,7 @@ class mcollective::install::debian {
           creates => "/usr/local/src/mcollective-common_0.4.9-1_all.deb";
       "install mcollective":
           command => "dpkg --ignore-depends=rubygems --force-confold -i mcollective_0.4.9-1_all.deb mcollective-common_0.4.9-1_all.deb",
-          unless => "dpkg -L mcollective &> /dev/null",
+          unless => "dpkg -l | grep mcollective | grep '^ii' &> /dev/null",
           cwd => "/usr/local/src",
           require => [ Exec["download mcollective"] , Exec["download mcollective-common"] ];
     }
