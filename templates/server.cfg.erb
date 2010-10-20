@@ -8,6 +8,10 @@ loglevel = info
 daemonize = 1
 identity = <%= fqdn %>
 
+# Registration
+registerinterval = 60
+registration = Agentlist
+
 # Plugins 
 <% if has_variable?('mcollective_psk' ) -%>
 securityprovider = psk
