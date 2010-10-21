@@ -13,16 +13,17 @@ class mcollective::config {
         require => Class["mcollective::install"]
     }
 
-    file { "/etc/mcollective": 
+    file {
+      "/etc/mcollective":
         ensure => directory,
-        mode  => 0755,
-    }
-    file { "/etc/mcollective/server.cfg":
+        mode  => 0755;
+      "/etc/mcollective/server.cfg":
         content => template("mcollective/server.cfg.erb"),
-        notify  => Service["mcollective"]
-    }
-    file { "/etc/mcollective/facts.yaml":
-        content => template("mcollective/facts.yaml.erb")
+        notify  => Service["mcollective"],
+        mode => 0700;
+      "/etc/mcollective/facts.yaml":
+        content => template("mcollective/facts.yaml.erb"),
+        mode  => 0700;
     }
 
 }
