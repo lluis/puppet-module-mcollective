@@ -1,12 +1,8 @@
 class mcollective::install::debian {
 
-    include rubygems
-
     $ver="0.4.10-1"
     $mcollective="mcollective_${ver}_all.deb"
     $mcollective_common="mcollective-common_${ver}_all.deb"
-
-    gem_package { "stomp": ensure => "installed" }
 
     exec {
       "download mcollective":
