@@ -1,16 +1,16 @@
 class mcollective::install::debian {
 
-    $ver="0.4.10-1"
+    $ver="1.0.0-2"
     $mcollective="mcollective_${ver}_all.deb"
     $mcollective_common="mcollective-common_${ver}_all.deb"
 
     exec {
       "download mcollective":
-          command => "wget http://mcollective.googlecode.com/files/$mcollective",
+          command => "wget http://puppetlabs.com/downloads/mcollective/$mcollective",
           cwd => "/usr/local/src",
           creates => "/usr/local/src/$mcollective";
       "download mcollective-common":
-          command => "wget http://mcollective.googlecode.com/files/$mcollective_common",
+          command => "wget http://puppetlabs.com/downloads/mcollective/$mcollective_common",
           cwd => "/usr/local/src",
           creates => "/usr/local/src/$mcollective_common";
       "install mcollective":
