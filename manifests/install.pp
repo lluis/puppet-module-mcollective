@@ -1,5 +1,5 @@
 class mcollective::install {
-  include stomp
+  include common::stomp
   case $operatingsystem {
     debian,ubuntu: { include mcollective::install::debian }
     redhat,centos,fedora: { include mcollective::install::redhat }
